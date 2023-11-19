@@ -1,0 +1,7 @@
+{
+  "name": "perfiles",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
