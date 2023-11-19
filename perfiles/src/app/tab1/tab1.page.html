@@ -1,17 +1,151 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title>Mateo estudiante de Tecnología Superior en Desarrollo De Software👨🏾‍💻</ion-title>
+      <ion-buttons slot="end">
+        <ion-button href="#experiencia">Experiencia</ion-button>
+        <ion-button href="#proyectos">Proyectos</ion-button>
+        <ion-button href="https://github.com/Einarr07" target="_blank" rel="noreferer">GitHub</ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <p>Soy estudiante de la carrera de <strong>desarrollador de software</strong> en la politécnica nacional</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2 id="experiencia">Experiencia</h2>
+          <ion-list>
+            <ion-item class="list-item">Golden Companies - 2023</ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-img title="Foto de presentación Mateo Congo" alt="Foto de presentación" src="imagenes/Foto de presentación.jpg" class="profile-image"></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2 id="proyectos">Proyectos realizados</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Sitio web comparativo</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Desarrollo de un sitio web comparativo con una interfaz amigable para el usuario</p>
+              <p><small>Tecnologías utilizadas: HTML, CSS, JavaScript</small></p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2>Preguntas frecuentes</h2>
+          <ion-list>
+            <ion-item>
+              <ion-label>¿Qué estudios tienes?</ion-label>
+              <ion-note slot="end">Actualmente soy estudiante en la Escuela Politécnica Nacional me encuentro cursando el último semestre en mi carrera Tecnología Superior en Desarrollo de Software</ion-note>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>¿Cuáles son tus hobbies?</ion-label>
+              <ion-note>
+                <ul>
+                  <li>Deportes</li>
+                  <p>Desde que tengo 15 años practico boxeo y los fines de semana doy un curso básico sobre esta disciplina</p>
+                  <li>Libros</li>
+                  <p>Actualmente, estoy leyendo "Cómo ganar amigos e influir sobre las personas" de Dale Carnegie y "Hábitos atómicos" de James Clear.</p>
+                </ul>
+              </ion-note>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2>Formulario de contacto</h2>
+          <form method="post" action="/">
+            <fieldset>
+                <legend>Información personal</legend>
+
+                <label style="display: block;">Nombre:
+                <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Marin Ramirez">
+                </label>
+
+                <label style="display: block;">Correo:
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder="marin@gmail.com">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información adicional</legend>
+
+                <label> Telefono:
+                    <input 
+                    type="tel"
+                    name="telefono"
+                    placeholder="593-789461236">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros</legend>
+
+                <div>
+                <label for="why"> ¿Por qué quieres contactar?:
+                    <select name="why" id="why">
+                        <option value="1">Trabajo</option>
+                        <option value="2">Duda</option>
+                        <option value="3">Más Información</option>
+                    </select>
+                </label>
+                </div>
+
+                <div>
+                    <datalist id="laguages">
+                        <option value="JavaScript"></option>
+                        <option value="Java"></option>
+                        <option value="Python"></option>
+                    </datalist>
+                    <label >¿Con qué lenguaje quieres que te ayude?
+                        <input list="laguages" name="laguages">
+                    </label>
+                </div>
+            </fieldset>
+
+            <button>Enviar un correo</button>
+        </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button href="mailto:aidenperse@gmail.com">Envíame un correo</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
