@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  // fecha
+  minDate: string;
+  // alerta
+  // alerta
+  alertButtons = ['Aceptar'];
+
+  constructor() {
+    // Obtener la fecha actual
+
+    const hoy = new Date();
+    const año = hoy.getFullYear();
+    const mes = ('0' + (hoy.getMonth() +1)).slice(-2);
+    const dia = ('0' + hoy.getDate()).slice(-2)
+
+    this.minDate = `${año}-${mes}-${dia}`
+
+  }
 
 }

@@ -2,7 +2,7 @@
 <ion-app>
   <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title>Mateo estudiante de Tecnología Superior en Desarrollo De Software👨🏾‍💻</ion-title>
+      <ion-title>Mateo Congo 👨🏾‍💻</ion-title>
       <ion-buttons slot="end">
         <ion-button href="#experiencia">Experiencia</ion-button>
         <ion-button href="#proyectos">Proyectos</ion-button>
@@ -22,8 +22,24 @@
       <ion-row>
         <ion-col size="12">
           <h2 id="experiencia">Experiencia</h2>
+
           <ion-list>
-            <ion-item class="list-item">Golden Companies - 2023</ion-item>
+            <ion-item class="list-item">
+              <ion-label>Golden Companies - 2023</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>ESFOT - 2022</ion-label>
+            </ion-item>
+
+            <ion-item class="list-item">
+              <ion-label>Facebook - 2021</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Google - 2020</ion-label>
+            </ion-item>
+
           </ion-list>
         </ion-col>
       </ion-row>
@@ -44,11 +60,12 @@
         <ion-col size="12">
           <ion-card>
             <ion-card-header>
-              <ion-card-title>Sitio web comparativo</ion-card-title>
+              <ion-card-title>Aplicación movil con <strong>IONIC</strong></ion-card-title>
             </ion-card-header>
+
             <ion-card-content>
               <p>Desarrollo de un sitio web comparativo con una interfaz amigable para el usuario</p>
-              <p><small>Tecnologías utilizadas: HTML, CSS, JavaScript</small></p>
+              <p>Tecnologías utilizadas: HTML, CSS, JavaScript</p> 
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -85,58 +102,77 @@
             <fieldset>
                 <legend>Información personal</legend>
 
-                <label style="display: block;">Nombre:
-                <input 
-                    type="text" 
-                    name="name"
-                    placeholder="Marin Ramirez">
-                </label>
+                <ion-list>
+                  <ion-item>
+                    <ion-input 
+                    label="Nombre:"
+                    placeholder="Juan Perez"
+                    ></ion-input>
+                  </ion-item>
 
-                <label style="display: block;">Correo:
-                    <input 
-                        type="email" 
-                        name="email"
-                        placeholder="marin@gmail.com">
-                </label>
+                  <ion-item>
+                    <ion-input 
+                    label="Correo:"
+                    placeholder="juanperez@epn.edu.ec"
+                    ></ion-input>
+                  </ion-item>
+                </ion-list>
             </fieldset>
 
             <fieldset>
                 <legend>Información adicional</legend>
 
-                <label> Telefono:
-                    <input 
-                    type="tel"
-                    name="telefono"
-                    placeholder="593-789461236">
-                </label>
+                <ion-list>
+                  <ion-item>
+                    <ion-input
+                    label="Telefono"
+                    placeholder="0998612735"
+                    ></ion-input>
+                  </ion-item>
+                </ion-list>
             </fieldset>
 
             <fieldset>
                 <legend>Otros</legend>
 
-                <div>
-                <label for="why"> ¿Por qué quieres contactar?:
-                    <select name="why" id="why">
-                        <option value="1">Trabajo</option>
-                        <option value="2">Duda</option>
-                        <option value="3">Más Información</option>
-                    </select>
-                </label>
-                </div>
+                <ion-list>
+                  <ion-item>
+                    <ion-select label="¿Por qué quieres contactar?" label-placement="floating">
+                      <ion-select-option value="1">Trabajo</ion-select-option>
+                      <ion-select-option value="2">Duda</ion-select-option>
+                      <ion-select-option value="3">Encargo</ion-select-option>
+                      <ion-select-option value="4">Más Información</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+                
+                <ion-list>
+                  <ion-item>
+                    <ion-select label="Con que necesitas ayuda?" placeholder="Lenguajes">
+                      <ion-select-option value="JavaScript">JavaScript</ion-select-option>
+                      <ion-select-option value="Java">Java</ion-select-option>
+                      <ion-select-option value="Python">Python</ion-select-option>
+                      <ion-select-option value="React">React</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
 
-                <div>
-                    <datalist id="laguages">
-                        <option value="JavaScript"></option>
-                        <option value="Java"></option>
-                        <option value="Python"></option>
-                    </datalist>
-                    <label >¿Con qué lenguaje quieres que te ayude?
-                        <input list="laguages" name="laguages">
-                    </label>
-                </div>
+                <ion-label>
+                  <h1>Fecha disponible</h1>
+                </ion-label>
+                <ion-datetime display-format="DD/MM/YYYY" min="{{minDate}}"></ion-datetime>
+                
             </fieldset>
 
-            <button>Enviar un correo</button>
+            <ion-button id="present-alert">Envíame un correo</ion-button>
+            <ion-alert
+              trigger="present-alert"
+              header="Contactame a:"
+              subHeader="aidenperse@gmail.com"
+              message="Espero que tengas un buen día"
+              [buttons]="alertButtons"
+            ></ion-alert>
+            
         </form>
         </ion-col>
       </ion-row>
@@ -145,7 +181,7 @@
 
   <ion-footer>
     <ion-toolbar>
-      <ion-button href="mailto:aidenperse@gmail.com">Envíame un correo</ion-button>
+      
     </ion-toolbar>
   </ion-footer>
 </ion-app>
