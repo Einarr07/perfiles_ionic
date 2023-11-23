@@ -1,17 +1,30 @@
 
 <ion-app>
+  
+  
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>Mateo Congo 👨🏾‍💻</ion-title>
-      <ion-buttons slot="end">
-        <ion-button href="#experiencia">Experiencia</ion-button>
-        <ion-button href="#proyectos">Proyectos</ion-button>
-        <ion-button href="https://github.com/Einarr07" target="_blank" rel="noreferer">GitHub</ion-button>
-      </ion-buttons>
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+
+      <!-- Botones para dispositivos pequeños -->
+      <ion-row class="ion-hide-md-and-up ion-hide-lg-and-up">
+        <ion-col size="4">
+          <ion-button href="#experiencia" expand="full">Experiencia</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button href="#proyectos" expand="full">Proyectos</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button href="https://github.com/Einarr07" target="_blank" rel="noreferer" expand="full">GitHub</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-toolbar>
   </ion-header>
+  
+  
 
-  <ion-content>
+  <ion-content (ionScroll) = "onScroll($event)">
     <ion-grid>
       <ion-row>
         <ion-col size="12">
@@ -46,7 +59,7 @@
 
       <ion-row>
         <ion-col size="12">
-          <ion-img title="Foto de presentación Mateo Congo" alt="Foto de presentación" src="imagenes/Foto de presentación.jpg" class="profile-image"></ion-img>
+          <ion-img title="Foto de presentación Mateo Congo" alt="Foto de presentación" src="assets/images/Foto de presentación.jpg" class="profile-image"></ion-img>
         </ion-col>
       </ion-row>
 
@@ -73,15 +86,29 @@
 
       <ion-row>
         <ion-col size="12">
-          <h2>Preguntas frecuentes</h2>
+          <h2 id="proyectos">Preguntas frecuentes</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
           <ion-list>
             <ion-item>
-              <ion-label>¿Qué estudios tienes?</ion-label>
-              <ion-note slot="end">Actualmente soy estudiante en la Escuela Politécnica Nacional me encuentro cursando el último semestre en mi carrera Tecnología Superior en Desarrollo de Software</ion-note>
+              <ion-grid>
+                <ion-label>¿Qué estudios tienes?</ion-label>
+              </ion-grid>
+              
+              <ion-note>
+                <p>Actualmente soy estudiante en la Escuela Politécnica Nacional me encuentro cursando el último semestre en mi carrera Tecnología Superior en Desarrollo de Software</p>
+              </ion-note>
+              
             </ion-item>
 
             <ion-item>
-              <ion-label>¿Cuáles son tus hobbies?</ion-label>
+              <ion-grid>
+                <ion-label>¿Cuáles son tus hobbies?</ion-label>
+              </ion-grid>
+              
               <ion-note>
                 <ul>
                   <li>Deportes</li>
@@ -104,16 +131,22 @@
 
                 <ion-list>
                   <ion-item>
+                    <ion-label position="stacked">Nombre</ion-label>
                     <ion-input 
-                    label="Nombre:"
+                    [(ngModel)]="nombre"
                     placeholder="Juan Perez"
+                    maxlength="40"
+                    required
                     ></ion-input>
                   </ion-item>
 
                   <ion-item>
+                    <ion-label position="stacked">Correo</ion-label>
                     <ion-input 
-                    label="Correo:"
+                    [(ngModel)] = "email"
                     placeholder="juanperez@epn.edu.ec"
+                    maxlength="50"
+                    required
                     ></ion-input>
                   </ion-item>
                 </ion-list>
@@ -124,11 +157,15 @@
 
                 <ion-list>
                   <ion-item>
+                    <ion-label position="stacked">Teléfono</ion-label>
                     <ion-input
-                    label="Telefono"
-                    placeholder="0998612735"
+                      placeholder="0998612735"
+                      [(ngModel)]="Telefono"
+                      maxlength="10"
+                      required
                     ></ion-input>
                   </ion-item>
+                  
                 </ion-list>
             </fieldset>
 
