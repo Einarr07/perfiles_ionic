@@ -1,17 +1,266 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  
+  
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title>Erick Jonathan Palomo Guamialamag 👨🏾‍💻</ion-title>
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+
+      <!-- Botones para dispositivos pequeños -->
+      <ion-row class="ion-hide-md-and-up ion-hide-lg-and-up">
+        <ion-col size="4">
+          <ion-button href="#experiencia" expand="full">Experiencia</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button href="#proyectos" expand="full">Proyectos</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button href="https://github.com/erick200011?tab=repositories" target="_blank" rel="noreferer" expand="full">GitHub</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-toolbar>
   </ion-header>
+  
+  
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+  <ion-content (ionScroll) = "onScroll($event)">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <p>Soy estudiante de la carrera de <strong>desarrollador de software</strong> en la Escuela Politécnica Nacional "EPN"</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2 id="experiencia">Experiencia</h2>
+
+          <ion-list>
+            <ion-item class="list-item">
+              <ion-label>Elétricista a tiempo Oct 2017- a la presente</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Profesor clases particulares Abril 2021-2022</ion-label>
+            </ion-item>
+
+            <ion-item class="list-item">
+              <ion-label>Facebook - 2021</ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Google - 2020</ion-label>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-img title="Foto de presentación Erick Palomo" alt="Foto de presentación" src="assets/images/Erick_Foto_CV.jpg" class="profile-image"></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2 id="proyectos">Proyectos realizados</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Aplicación movil con <strong>IONIC</strong></ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <p>Desarrollo de un sitio web comparativo con una interfaz amigable para el usuario</p>
+              <p>Tecnologías utilizadas: HTML, CSS, JavaScript</p> 
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2 id="proyectos">Preguntas frecuentes</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-grid>
+                <ion-label>¿Qué estudios tienes?</ion-label>
+              </ion-grid>
+              
+              <ion-note>
+                <p>Actualmente soy estudiante en la Escuela Politécnica Nacional me encuentro cursando el último semestre en mi carrera Tecnología Superior en Desarrollo de Software</p>
+              </ion-note>
+              
+            </ion-item>
+
+            <ion-item>
+              <ion-grid>
+                <ion-label>¿Cuáles son tus hobbies?</ion-label>
+              </ion-grid>
+              
+              <ion-note>
+                <ul>
+                  <li>Aprendizaje</li>
+                  <p>Puedo ser capaz de aprender cualquier disciplina las cuales las demuestro a la hora de trabajar o enseñar</p>
+                  <li>Deportes</li>
+                  <p>Práctico entrenamiento del cuerpo desde los 15 empecé con calistenia y ahora en el GYM</p>
+                </ul>
+              </ion-note>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <h2>Referencia</h2>
+          <form method="post" action="/">
+            <fieldset>
+                <legend>Profecionales</legend>
+
+                <ion-list>
+
+                  <ion-item>
+                    <ion-label position="stacked">Nombre</ion-label>
+                    <ion-input 
+                    [(ngModel)]="nombre"
+                    placeholder="Ing. Pablo Muñoz "
+                    maxlength="40"
+                    required
+                    ></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="stacked">Telefono</ion-label>
+                    <ion-input 
+                    [(ngModel)] = "email"
+                    placeholder="0998929285"
+                    maxlength="50"
+                    required
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="stacked">Nombre</ion-label>
+                    <ion-input 
+                    [(ngModel)]="nombre"
+                    placeholder="Tec.Lenin Pacheco"
+                    maxlength="40"
+                    required
+                    ></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="stacked">Telefono</ion-label>
+                    <ion-input 
+                    [(ngModel)] = "email"
+                    placeholder="0997403394"
+                    maxlength="50"
+                    required
+                    ></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="stacked">Nombre</ion-label>
+                    <ion-input 
+                    [(ngModel)]="nombre"
+                    placeholder="Tec.Jose Maila"
+                    maxlength="40"
+                    required
+                    ></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label position="stacked">Telefono</ion-label>
+                    <ion-input 
+                    [(ngModel)] = "email"
+                    placeholder="099 502 4223"
+                    maxlength="50"
+                    required
+                    ></ion-input>
+                  </ion-item>
+                 
+                </ion-list>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información adicional</legend>
+
+                <ion-list>
+                  <ion-item>
+                    <ion-label position="stacked">Teléfono personal</ion-label>
+                    <ion-input
+                    [(ngModel)]="nombre"
+                    placeholder="Erick PALOMO"
+                      placeholder="0967116674"
+                      [(ngModel)]="Telefono"
+                      maxlength="10"
+                      required
+                    ></ion-input>
+                  </ion-item>
+                  
+                </ion-list>
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros</legend>
+
+                <ion-list>
+                  <ion-item>
+                    <ion-select label="¿Por qué quieres contactar?" label-placement="floating">
+                      <ion-select-option value="1">Trabajo</ion-select-option>
+                      <ion-select-option value="2">Duda</ion-select-option>
+                      <ion-select-option value="3">Encargo</ion-select-option>
+                      <ion-select-option value="4">Más Información</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+                
+                <ion-list>
+                  <ion-item>
+                    <ion-select label="Con que necesitas ayuda?" placeholder="Lenguajes">
+                      <ion-select-option value="JavaScript">JavaScript</ion-select-option>
+                      <ion-select-option value="Java">Java</ion-select-option>
+                      <ion-select-option value="Python">Python</ion-select-option>
+                      <ion-select-option value="React">React</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+
+                <ion-label>
+                  <h1>Fecha disponible</h1>
+                </ion-label>
+                <ion-datetime display-format="DD/MM/YYYY" min="{{minDate}}"></ion-datetime>
+                
+            </fieldset>
+
+            <ion-button id="present-alert">Envíame un correo</ion-button>
+            <ion-alert
+              trigger="present-alert"
+              header="Contactame a:"
+              subHeader="epalomo154@gmail.com"
+              message="Espero que tengas un buen día"
+              [buttons]="alertButtons"
+            ></ion-alert>
+            
+        </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
